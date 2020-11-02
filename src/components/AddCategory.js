@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const AddCategory = ({ setCategories }) => {
   const handleInput = (e) => {
@@ -11,11 +11,11 @@ export const AddCategory = ({ setCategories }) => {
     const newCategory = inputValue.trim();
     if (newCategory.length) {
       setCategories((categories) => [...new Set([newCategory, ...categories])]);
+      setInputValue('');
     }
-    setInputValue("");
   };
 
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
   return (
     <form onSubmit={handleSubmit}>
       <h2>Add Category</h2>

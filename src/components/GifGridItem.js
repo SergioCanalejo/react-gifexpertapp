@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
 
-export const GifGridItem = ({ id, title, url }) => {
+// eslint-disable-next-line react/prop-types
+export const GifGridItem = ({ title, url }) => {
   return (
     <div className="card animate__animated animate__fadeIn">
       <img src={url} alt={title} />
